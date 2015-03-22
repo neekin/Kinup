@@ -1,0 +1,60 @@
+
+body {
+    height: 3000px;
+}
+
+
+.topmenu {
+    height: 40px;
+    width: 100%;
+    background: #B76C80;
+    //background: #C00B26;
+
+}
+
+.topmenusrcoll {
+      position:fixed;
+      opacity: 0.6;
+}
+.subheading{
+    font-size:20px;
+    color:white;
+    background:#fff;
+    height:40px;
+    line-height:40px;
+    width:200px;
+    position:absolute;
+    left:10%;
+    top:20%;
+    text-align:center;
+    background:rgba(0,0,0,0.6);  
+    filter:Alpha(opacity=60);/*只对ie7,ie8有效*/  
+}
+.subhendingtext
+{    position: absolute;
+     font-size:30px;
+     color:#fff;
+     opacity:99;
+}
+.logo {
+    color:white;
+
+}
+.navbtn {
+    color: white;
+    // position: absolute;
+    // left: 10%; 
+    line-height:50px;
+     width: 400px;
+    ul {
+        list-style-type: none;
+        li {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            margin: 5px;
+            float: left;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>This is KinUp</title>
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag "application" %>
+</head>
+<body class="<%= params[:controller]+'-' + params[:action] %>" >
+	<%= yield%>
+<div class="goBackTop">
+	回到顶部
+</div>
+</body>
+</html>
