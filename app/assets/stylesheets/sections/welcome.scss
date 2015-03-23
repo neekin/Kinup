@@ -16,36 +16,73 @@ body {
       position:fixed;
       opacity: 0.6;
 }
-.subheading{
-    font-size:20px;
-    color:white;
-    background:#fff;
-    height:40px;
-    line-height:40px;
-    width:200px;
-    position:absolute;
-    left:10%;
-    top:20%;
-    text-align:center;
-    background:rgba(0,0,0,0.6);  
-    filter:Alpha(opacity=60);/*只对ie7,ie8有效*/  
+//.subheading{
+//    font-size:20px;
+//    color:white;
+//    background:#fff;
+//    height:40px;
+//    line-height:40px;
+//    width:200px;
+//    position:absolute;
+//    left:10%;
+//    top:20%;
+//    text-align:center;
+//    background:rgba(0,0,0,0.6);
+//    filter:Alpha(opacity=60);/*只对ie7,ie8有效*/
+//}
+//.subhendingtext
+//{    position: absolute;
+//     font-size:30px;
+//     color:#fff;
+//     opacity:99;
+//}
+.text{
+
+  position:relative;   //重要使浮动
+  padding:10px 0 0 5px;
+  color:#F7F7F7;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 28px;
+  width: 200px;
+text-align: center;
 }
-.subhendingtext
-{    position: absolute;
-     font-size:30px;
-     color:#fff;
-     opacity:99;
+
+.bg{
+
+  position: absolute;  //重要使浮动
+
+  width:200px;  //具体设置
+
+  height:40px;  //具体设置
+
+  background-color: #730E15;
+
+  FILTER:alpha(opacity=70);
+
+  opacity:0.7;
+
+  -moz-opacity:0.7;
+
+  z-index: 1;
+
+}
+@media screen and (max-width: 780px)
+{
+  .headimg{
+    display: none;
+  }
+  .message{
+    margin-top: 20px;
+
+  }
 }
 .logo {
     color:white;
-
 }
 .navbtn {
     color: white;
-    // position: absolute;
-    // left: 10%; 
     line-height:50px;
-     width: 400px;
     ul {
         list-style-type: none;
         li {
@@ -55,6 +92,35 @@ body {
             font-size: 20px;
             margin: 5px;
             float: left;
+          a{
+            color: white;
+          }
+          a:hover{
+              text-decoration: none;
+          }
         }
     }
+}
+.headimg{
+   img{
+    width: 60px;
+    height: 60px;}
+}
+
+.context{
+     h4{
+       margin-top:-4px;
+     }
+  span{
+    float: right;
+  }
+
+  img{
+    max-width: 300px;
+  }
+
+}
+.message{
+    margin-top: 80px;
+    margin-bottom: 20px;
 }

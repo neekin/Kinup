@@ -3,10 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>This is KinUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= stylesheet_link_tag "application" %>
 	<%= javascript_include_tag "application" %>
 </head>
 <body class="<%= params[:controller]+'-' + params[:action] %>" >
+<div class="topmenu"></div>
+<div class="jumbotron home-banner" data-stretch="/assets/banner.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="logo">
+          <h1>KinUp</h1>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="navbtn">
+          <ul>
+            <li>关于</li>
+            <li><a href="#">微博</a></li>
+            <li><a href="">相册</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="bg"></div>
+        <div class="text">分享您的快乐</div>
+      </div>
+      <div class="col-sm-3"><a href="" class="btn btn-primary">分享快乐</a></div>
+    </div>
+  </div>
+</div>
 	<%= yield%>
 <div class="goBackTop">
 	回到顶部

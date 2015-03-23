@@ -1,40 +1,42 @@
 
- <div class="topmenu"></div> 
-<div class="jumbotron home-banner" data-stretch="/assets/banner.jpg">
-<div class="logo">
-			<h1>KinUp</h1>
-		</div>
-	<div class="navbtn">
-		
-		<ul>
-			<li>about</li>
-			<li>placeholder</li>
-			<li>test</li>
-		</ul>
-		<div class="clear"></div>
-		<p>^......^</p>
-	</div>
-	
-	<p><a class="btn btn-primary btn-large">分享你的快乐</a></p>
-</div>
 
-<!-- <div class="banner col-xd-12" data-stretch="/assets/banner.jpg">
-	<div class="navbtn">
-		<div class="logo">
-			<h1>KinUp</h1>
-		</div>
-		<ul>
-			<li>about</li>
-			<li>placeholder</li>
-			<li> test</li>
-		</ul>
-	</div>
-	<div class="subheading"><div class="subhendingtext">分享快乐</div></div>
-</div> -->
 <div class="container">
-	<div class="row">
-		<div class="col-md-1">11</div>
-		<div class="col-md-3">22</div>
-	</div>
+  <div class="row message">
+    <div class="col-sm-1 headimg">
+      <img src="<%= image_url 'head.png' %>"/>
+    </div>
+    <div class="col-sm-11 context">
+      <h4>唐马儒:</h4>
+      <div class="">坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年</div>
+      <span>10分钟前</span>
+    </div>
+  </div>
+  <div class="row message">
+    <div class="col-sm-1 headimg">
+      <img src="<%= image_url 'head.png' %>"/>
+    </div>
+    <div class="col-sm-11 context">
+      <h4>唐马儒:</h4>
+      <div class="">坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年<img src="/assets/banner.jpg" alt=""/></div>
+      <span>10分钟前</span>
+    </div>
+  </div>
+  <div class="row message">
+    <div class="col-sm-1 headimg">
+      <img src="<%= image_url 'head.png' %>"/>
+    </div>
+    <div class="col-sm-11 context">
+      <h4>唐马儒:</h4>
+      <div class="">坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年
+        坚持做中国人自己的鉴黄事业，用心鉴黄，良心鉴黄，服务好每一位中国青少年</div>
+      <span>10分钟前</span>
+    </div>
+  </div>
+  <%= render partial:'issue_list',locals:{issues:@issues} %>
 </div>
 <script> $('.home-banner').anystretch();</script>

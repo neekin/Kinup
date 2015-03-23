@@ -11,6 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150323092603) do
+
+  create_table "comments", force: true do |t|
+  end
+
+  create_table "issues", force: true do |t|
+    t.string   "message"
+    t.string   "user"
+    t.string   "headimg"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photobooks", force: true do |t|
+  end
+
+  create_table "photos", force: true do |t|
+  end
+
+  create_table "users", force: true do |t|
+  end
 
 end

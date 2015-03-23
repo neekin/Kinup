@@ -1,0 +1,12 @@
+<% issues.each do |i| %>
+<div class="row message">
+  <div class="col-sm-1 headimg">
+    <img src="<%= image_url 'head.png' %>"/>
+  </div>
+  <div class="col-sm-11 context">
+    <h4><%= i[:user] %>:</h4>
+    <div class=""><%= i[:message]%></div>
+    <span>10分钟前</span>
+  </div>
+</div>
+<% end %>
