@@ -7,7 +7,25 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  # issues
+ resources :issues
+#test
+  #comments
+  post '/issues/:issue_id/comment' => 'comments#create'
+  post '/comments/showcomments' =>'comments#showcomments'
+  resources :comments,only:[:create]
+  #user
+  get 'signup' => 'users#signup' , :as =>'signup'
+  get 'login'=> 'users#login', :as =>'login'
+  post 'create_login_session' => 'users#create_login_session'
+  get 'logout' =>'users#logout', :as =>'logout'
+  resources :users,only:[:create]
+  #photobook
+  get 'photos' => 'photobook#showphotobooklist' ,:as=>'photos'
+  post 'createphotobook' =>'photobook#createphotobook'
+  get '/photos/:photobook_id'=>'photobook#showphotos'
+  #photo
+  post 'uploadphoto' =>'photo#uploadphoto'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -45,7 +63,7 @@ Rails.application.routes.draw do
   #     post 'toggle'
   #   end
   #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  #   resources :photobook, concerns: :toggleable
 
   # Example resource route within a namespace:
   #   namespace :admin do

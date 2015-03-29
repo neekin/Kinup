@@ -1,0 +1,22 @@
+<%= form_tag "/create_login_session" do %>
+    <div class="modal fade loginModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal" aria-hidden="true">x</a>
+            <h4 class="modal-title">登陆</h4>
+          </div>
+          <div class="modal-body">
+            <div>用户名 <%= text_field_tag :username, params[:username], :class => "", :style => "width:200px" %></div>
+            <div>密码 <%= password_field_tag :password, params[:password], :class => "", :style => "width:200px" %></div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default"
+                    data-dismiss="modal"> 关闭
+            </button>
+            <%= submit_tag "登陆", :class => "submit-issue-button btn btn-primary" %></div>
+        </div>
+      </div>
+    </div>
+<% end %>

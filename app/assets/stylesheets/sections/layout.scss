@@ -1,10 +1,72 @@
 .goBackTop{
-	height: 80px;
-	width: 80px;
-	border: 1px solid #0094ff;
-	position: fixed;
-	right: 0px;
-	bottom: 100px;
+//	height: 80px;
+//	width: 80px;
+//	border: 1px solid #0094ff;
+//	position: fixed;
+//	right: 0px;
+//	bottom: 100px;
 	display:none;
+    opacity: 0.6;
+    z-index: 101;
+    position: fixed;
+    right: 0;
+    bottom:100px;
+   border: 1px solid #E9CDA6;
+   height: 58px;
+   width: 60px;
+   background-color: #F7F5F0;
+   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  cursor:pointer;
+
+}
+.goBackTop:hover
+{
+
+  opacity: 1;
+  filter:alpha(opacity=100);
+}
+.goBackTop .arrow{
+
+  position: absolute;
+  left:15px;
+  top:-10px;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-bottom-color: #cc3333;
+}
+.goBackTop .stick{
+  position: absolute;
+  left: 21px;
+  top:16px;
+  width: 20px;
+  height: 24px;
+  display: block;
+  background-color: #cc3333;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.goBackTop .goToptext
+{
+  line-height:10px ;position:absolute; bottom: 0;
+  color: #cc3333;
+}
+.topmenu {
+  height: 40px;
+  width: 100%;
+  background: #B76C80;
+  z-index: 100;
+  //background: #C00B26;
+}
+
+.topmenusrcoll {
+  position:fixed;
+  opacity: 0.6;
+}
+.topmenusrcoll:hover
+{opacity: 1;
 
 }

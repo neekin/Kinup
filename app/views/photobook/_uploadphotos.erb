@@ -1,0 +1,36 @@
+<div class="modal fade uploadphotoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal" aria-hidden="true">x</a>
+        <h4 class="modal-title">上传照片</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row fileupload-buttonbar">
+          <div class="col-lg-7">
+             <span class="btn btn-success fileinput-button">
+               <i class="glyphicon glyphicon-plus"></i>
+               <span>添加照片</span>
+               <input type="file" name="files[]" multiple=""/>
+             </span>
+            <button type="submit" class="btn btn-primary start">
+              <i class="glyphicon glyphicon-upload"></i>
+              <span>上传</span>
+            </button>
+          </div>
+          <div class="col-lg-5 fileupload-progress fade">
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+            </div>
+            <div class="progress-extended"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"
+                data-dismiss="modal"> 关闭
+        </button>
+
+      </div>
+    </div>
+  </div>

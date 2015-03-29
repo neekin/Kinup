@@ -1,0 +1,29 @@
+<% if issues.count==0 %>
+    <div><h1>还没人发微博呀！！！</h1></div>
+<% else %>
+    <% issues.each do |i| %>
+        <div class="row message">
+          <div class="col-sm-1 headimg">
+            <img src="<%= image_url 'head.png' %>"/>
+          </div>
+          <div class="col-sm-11 context">
+            <h4><%= i.user.username %>:</h4>
+            <div class="well well-lg">&nbsp;&nbsp;&nbsp;&nbsp;<%= i[:message] %>
+            </div>
+            <span><%= time_ago_in_words_cn(i.created_at) %></span>
+          </div>
+        </div>
+            <div class="container comments">
+              <% if current_user %>
+                   <%= render partial:'comments/comment_box',locals: {issue:i} %><% end %>
+              <% if i.comments.count>0 %>
+                      <%= render partial: 'comments/comments', locals: {comments:i.comments.reverse.take(6)} %>
+                  <% if i.comments.count > 6 %>
+                  <div class="col-sm-12" style="text-align: center"><button class="btn btn-primary showhidecomment" data-issue="<%= i.id%>" data-type="show">隐藏<%=i.comments.count-6%>条评论,点击加载所有评论</button></div>
+                  <% end%>
+              <% end %>
+              </div>
+    <% end %>
+<% end %>
+
+

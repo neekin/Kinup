@@ -11,26 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323092603) do
+ActiveRecord::Schema.define(version: 20150326034129) do
 
   create_table "comments", force: true do |t|
+    t.string   "comments"
+    t.integer  "user_id"
+    t.integer  "issue_id"
+    t.integer  "photo_id"
+    t.datetime "created_at"
   end
 
   create_table "issues", force: true do |t|
     t.string   "message"
-    t.string   "user"
-    t.string   "headimg"
+    t.integer  "user_id"
+    t.integer  "msg_type"
+    t.integer  "issue_id"
+    t.integer  "photobook_id"
+    t.datetime "created_at"
+  end
+
+  create_table "photo", force: true do |t|
+    t.string   "path"
+    t.integer  "photobook_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "photobooks", force: true do |t|
-  end
-
-  create_table "photos", force: true do |t|
+    t.string   "bookname"
+    t.string   "bookcover"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.string   "headimg"
+    t.datetime "created_at"
+    t.datetime "last_login_time_at"
+    t.string   "auth_token"
   end
 
 end

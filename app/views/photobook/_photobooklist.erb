@@ -1,0 +1,18 @@
+<div class="row">
+  <% photobooklist.each do |photobook| %>
+      <div class="col-sm-4 photos">
+        <a href="/photos/<%= photobook.id%>">
+        <div class="photobook">
+          <div class="photobook-cover">
+            <% if photobook.bookcover %>
+                <img class="bookcover" src="<%= photobook.bookcover %>">
+            <% else %>
+                <img class="defaultimg" src="/assets/default.gif">
+            <% end %>
+          </div>
+          <div class="photobook-title"> <%= photobook.bookname %></div>
+        </div>
+        </a>
+      </div>
+  <% end %>
+</div>

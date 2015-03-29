@@ -1,0 +1,18 @@
+/**
+ * Created by neekin on 15/3/26.
+ */
+
+var  f=$("input[name='comment[issue_id]'][value=<%= @comment.issue_id%>]").parents("form");
+var html = "<%= j render partial:'/comments/comment',locals: {comment:@comment} %>";
+var thisid =".issue"+<%= @comment.issue_id%>;
+f.after(html);
+if($(thisid).length >5)
+{
+    var btn = $("button[data-issue='<%= @comment.issue_id%>']");
+    if(btn.attr("data-type")=='show')
+    {
+        $(thisid)[5].remove();
+    }
+}
+var t =f.find("textarea");
+t.val("");
