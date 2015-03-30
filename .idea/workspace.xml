@@ -4,6 +4,7 @@
     <list default="true" id="85445552-f82b-43b1-8e07-108dbe81016c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/_comments.erb" afterPath="$PROJECT_DIR$/app/views/comments/_comments.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photobook/_photobooklist.erb" afterPath="$PROJECT_DIR$/app/views/photobook/_photobooklist.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="3c87a3ce-d6c6-452b-a872-25287da8524f" name="Rejected commit: Default" comment="UPLOADIMGOK" />
     <ignored path="Kinup.iws" />
@@ -199,8 +200,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="323" />
+    <option name="x" value="-432" />
+    <option name="y" value="164" />
     <option name="width" value="1936" />
     <option name="height" value="1011" />
   </component>
@@ -609,7 +610,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="323" width="1936" height="1011" extended-state="1" />
+    <frame x="-432" y="164" width="1936" height="1011" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
