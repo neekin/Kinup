@@ -7,7 +7,7 @@
             <% if photobook.bookcover %>
                 <img class="bookcover" src="<%= photobook.bookcover %>">
             <% else %>
-                <img class="defaultimg" src="/assets/default.gif">
+                <img class="defaultimg" src="<%=image_url'default.gif' %>">
             <% end %>
           </div>
           <div class="photobook-title"> <%= photobook.bookname %></div>
