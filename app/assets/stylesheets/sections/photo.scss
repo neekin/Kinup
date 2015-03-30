@@ -1,6 +1,16 @@
+.photolist
+{
+  margin: 50px;
+}
+
 .photo
 {
+  padding: 10px;
   img{
-    height: 300px;
+    height: 260px;
+    width: 100%;
+  }
+  .photoname{
+    text-align: center;
   }
 }
