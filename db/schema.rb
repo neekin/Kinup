@@ -30,9 +30,10 @@ ActiveRecord::Schema.define(version: 20150326034129) do
     t.datetime "created_at"
   end
 
-  create_table "photo", force: true do |t|
+  create_table "photos", force: true do |t|
     t.string   "path"
     t.integer  "photobook_id"
+    t.string "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

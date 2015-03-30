@@ -1,0 +1,6 @@
+<%= form_for(User.new,url:{action:"headimg"},html:{multipart:true}) do |f|%>
+<div class="field">
+  <%= f.file_field :headimg%>
+  <%= f.submit "上传头像", class: "btn btn-primary btn-sm" %>
+</div>
+<% end %>

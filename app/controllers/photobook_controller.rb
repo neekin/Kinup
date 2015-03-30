@@ -10,5 +10,6 @@ class PhotobookController < ApplicationController
   end
   def showphotos
       @photobook = Photobook.find_by_id(params[:photobook_id])
+      @photolist = Photo.where(:photobook_id=>params[:photobook_id])
   end
 end

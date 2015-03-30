@@ -39,5 +39,10 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+#gem 'debugger', group: [:development, :test]
+
+#image
+gem 'carrierwave','~> 0.10.0'
+gem 'mini_magick','~> 3.8.0'
+gem 'fog','~> 1.23.0'
 

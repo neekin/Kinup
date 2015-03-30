@@ -28,6 +28,31 @@ class UsersController < ApplicationController
     redirect_to :root
   end
 
+  def info
+  end
+
+  def headimg
+    file = params[:user][:headimg]
+    directory = "public/image"
+    path = File.join(directory,file.original_filename)
+
+    if file
+      File.open(path,"wb") do |f|
+        f.write(file.read)
+      end
+    end
+    render plain:file.original_filename.inspect
+   # headimg = params[:user][:headimg]
+   # filename = params[:user][:filename]
+   # File.open(filename,"wb") do |file|
+   # file.write(headimg.read)
+   # end
+   # @current_user.headimg => params[:user][:headimg]
+   # @current_user.save
+   # render plain:params[:user][:headimg].inspect
+
+  end
+
   private
   def user_params
     params.require(:user).permit!
