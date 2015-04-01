@@ -1,10 +1,28 @@
 <div class="row photolist">
 <% photolist.each do |photo| %>
    <div class="col-sm-3 photo">
-     <img src="<%= photo.path%>" alt=""/>
+
+     <%= image_tag(photo.path_url(:small),:data=>{:src=>photo.path_url,:pid=>photo.id}) if photo.path%>
      <div class="photoname">
-       <%= photo.filename%>
+       <%= photo.original_filename%>
      </div>
    </div>
 <% end %>
 </div>
+<script src="/layer/layer.min.js"></script>
+<script>
+    ;!function(){
+        var i = 0;
+        layer.use('layer/extend/layer.ext.js', function(){
+            //初始加载即调用，所以需放在ext回调里
+            layer.ext = function(){
+                layer.photosPage({
+                    html: ++i,
+                    title: '<%=photolist[0].photobook.bookname %>',
+                    id:1 , //相册id，可选
+                    parent:'.photo'
+                });
+            };
+        });
+    }();
+</script>

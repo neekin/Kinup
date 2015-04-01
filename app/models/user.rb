@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
       has_secure_password
       validates :username ,presence: true
       validates :username , uniqueness: { case_sensitive: false}
-      #mount_uploader:headimg,PictureUploader
+      mount_uploader :avatar, AvatarUploader
 
   #添加用户验证
   before_create { generate_token(:auth_token) }

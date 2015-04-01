@@ -1,10 +1,10 @@
 # encoding: utf-8
 
-class PictureUploader < CarrierWave::Uploader::Base
+class PhotoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -13,8 +13,21 @@ class PictureUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "#{model.class.to_s.underscore}/#{model.photobook.bookname}"
   end
+   #定义临时文件夹
+   def cache_dir
+     "#{Rails.root}/tmp/uploads"
+   end
+
+   version :small do
+     process :resize_to_fit => [360, 360]
+   end
+
+  #指定上传格式
+   def extension_white_list
+     %w(jpg jpeg gif png)
+   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -47,5 +60,14 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+   def filename
+     if original_filename
+       # current_path 是 Carrierwave 上传过程临时创建的一个文件，有时间标记
+       # 例如: /Users/jason/work/ruby-china/public/uploads/tmp/20131105-1057-46664-5614/_____2013-11-05___10.37.50.png
+       # @name ||= Digest::SHA1.hexdigest(current_path)
+       "#{model.filename}.#{file.extension}"
+     end
+   end
 
 end

@@ -19,7 +19,9 @@ class CommentsController < ApplicationController
     # partial: 'comments/test', locals: {params:params}#
     #render palin:params.inspect
     @comments = Comment.where(:issue_id => params[:issue_id]).reverse.drop(6)
-    render  partial: 'comments/comments', locals: {comments: @comments}
+    respond_to do |format|
+      format.html {render :layout => false}
+    end
   end
   private
     def comments_params

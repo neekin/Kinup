@@ -31,27 +31,41 @@ class UsersController < ApplicationController
   def info
   end
 
-  def headimg
-    file = params[:user][:headimg]
-    directory = "public/image"
-    path = File.join(directory,file.original_filename)
-
-    if file
-      File.open(path,"wb") do |f|
-        f.write(file.read)
-      end
-    end
-    render plain:file.original_filename.inspect
-   # headimg = params[:user][:headimg]
-   # filename = params[:user][:filename]
-   # File.open(filename,"wb") do |file|
-   # file.write(headimg.read)
-   # end
-   # @current_user.headimg => params[:user][:headimg]
-   # @current_user.save
-   # render plain:params[:user][:headimg].inspect
+  def avatar
+    current_user.avatar=user_params[:avatar]
+    current_user.save!
+    #uploader = AvatarUploader.new
+    #uploader(user_params[:avatar])
+    #@user =current_user
+    # @user.avatar = user_params[:avatar]
+    #if  current_user.save
+    # render json: { success: true, src: @user.to_json }
+    #else
+    redirect_to :root
+    # end
 
   end
+  # def headimg
+  #   file = params[:user][:headimg]
+  #   directory = "public/image"
+  #   path = File.join(directory,file.original_filename)
+  #
+  #   if file
+  #     File.open(path,"wb") do |f|
+  #       f.write(file.read)
+  #     end
+  #   end
+  #   render plain:file.original_filename.inspect
+  #  # headimg = params[:user][:headimg]
+  #  # filename = params[:user][:filename]
+  #  # File.open(filename,"wb") do |file|
+  #  # file.write(headimg.read)
+  #  # end
+  #  # @current_user.headimg => params[:user][:headimg]
+  #  # @current_user.save
+  #  # render plain:params[:user][:headimg].inspect
+  #
+  # end
 
   private
   def user_params

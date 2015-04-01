@@ -1,3 +1,22 @@
 <div class="container">
   <%= render partial: 'issues/issue_list', locals: {issues: @issues} %>
 </div>
+<script>
+$(".showhidecomment").click(function(){
+var issueid = $(this).attr("data-issue");
+var dom = $(this);
+$.ajax({
+url:"/comments/showcomments",
+type:"post",
+dataType:"html",
+data:{issue_id:issueid},
+success:function(data){
+//console.log(data);
+
+dom.parent().before(data);
+dom.attr("data-type","close")
+dom.hide();
+}
+});
+});
+</script>

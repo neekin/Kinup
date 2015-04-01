@@ -21,13 +21,15 @@ Rails.application.routes.draw do
   get 'logout' =>'users#logout', :as =>'logout'
   resources :users,only:[:create]
   get 'info' =>'users#info'
-  post 'headimg' => 'users#headimg'
+  post 'avatar' => 'users#avatar'
   #photobook
   get 'photos' => 'photobook#showphotobooklist' ,:as=>'photos'
   post 'createphotobook' =>'photobook#createphotobook'
   get '/photos/:photobook_id'=>'photobook#showphotos'
   #photo
   post 'photos/uploadphoto' =>'photo#uploadphoto'
+  get 'photos/menuData/xml' =>'photobook#createphotobookxml'
+  #get '/uploads/photo/path'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
